@@ -2,6 +2,7 @@
 
 namespace App\Repositories;
 
+use Exception;
 use App\Photo;
 use App\User as UserModel;
 use Illuminate\Contracts\Mail\Mailer;
@@ -178,7 +179,7 @@ class User {
 			}
 		}
 
-		return null;
+		throw new Exception('Album "'.env('ALBUM_NAME').'" não encontrado!');
 	}
 
 	private function storePhoto($photo)

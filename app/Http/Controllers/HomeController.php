@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 
+use Exception;
 use Input;
 use Socialite;
 use Redirect;
@@ -32,9 +33,13 @@ class HomeController extends Controller {
 
 	public function facebookCallback()
 	{
-		if ( ! $this->userRepository->fetchImages())
+		try
 		{
-			return 'Erro ao logar no Facebook';
+			$this->userRepository->fetchImages();
+		}
+		catch(Exception $e)
+		{
+			return view('message')->with('message', $e->getMessage());
 		}
 
 		return Redirect::route('fetched');
@@ -50,6 +55,11 @@ class HomeController extends Controller {
 		$this->userRepository->sendMail($request->all());
 
 		return view('message')->with('message', 'Sua mensagem foi enviada, obrigado!');
+	}
+
+	public function privacy()
+	{
+		return view('privacy');
 	}
 
 }
