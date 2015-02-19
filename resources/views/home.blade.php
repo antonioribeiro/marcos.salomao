@@ -6,10 +6,10 @@
 
 		<!-- Nav -->
 		<nav id="nav">
-			<a href="#me" class="icon fa-home active"><span>Home</span></a>
+			<a href="#me" class="icon fa-home active"><span>Principal</span></a>
 			<a href="#work" class="icon fa-folder"><span>Trabalho</span></a>
-			<a href="#contact" class="icon fa-envelope"><span>Contact</span></a>
-			<a href="https://www.facebook.com/antoniocarlosr" target="_blank" class="icon fa-facebook"><span>Facebook</span></a>
+			<a href="#contact" class="icon fa-envelope"><span>Contato</span></a>
+			<a href="{{ env('FACEBOO_PAGE') }}" target="_blank" class="icon fa-facebook"><span>Facebook</span></a>
 		</nav>
 
 		<!-- Main -->
@@ -38,18 +38,10 @@
 				</p>
 				<section>
 					<div class="row">
-						<?php $counter = 1; ?>
 						@foreach($photos as $photo)
 							<div class="4u">
 								<a href="#" class="image fit"><img src="{{ $photo->url }}" alt=""></a>
 							</div>
-
-							<?php
-								if ($counter++ % 3 == 0)
-								{
-									?> <\div><div class="row"> <?php
-								}
-							?>
 						@endforeach
 					</div>
 				</section>
@@ -63,13 +55,14 @@
 
 				<h4>Região</h4>
 				<p>
-					Rio de Janeiro, Capital e Grande Rio.
+					{{ $region }}
 				</p>
 
 				<h4>Telefones</h4>
 				<p>
-					21-9-8088-2233 (Claro)<br>
-					21-7088-2211 (Nextel)
+					@foreach ($telephones as $telephone)
+						{{ $telephone }}<br>
+					@endforeach
 				</p>
 
 				<h4>Envie Uma Mensagem</h4>

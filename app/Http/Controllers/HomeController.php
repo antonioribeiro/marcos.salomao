@@ -1,13 +1,11 @@
 <?php namespace App\Http\Controllers;
 
-use App\Http\Requests\SendMail;
-use App\Photo;
 use Input;
 use Socialite;
 use Redirect;
 use Auth;
+use App\Http\Requests\SendMail;
 use App\Repositories\User as UserRepository;
-
 
 class HomeController extends Controller {
 
@@ -20,7 +18,11 @@ class HomeController extends Controller {
 
 	public function index()
 	{
-		return view('home')->with('photos', $this->userRepository->getAllPhotos());
+
+		return view('home')
+			->with('photos', $this->userRepository->getAllPhotos())
+			->with('telephones', explode('|', env('TELEPHONES')))
+			->with('region', env('REGION'));
 	}
 
 	public function facebookLogin()
