@@ -1,0 +1,31 @@
+.alert-box {
+    color:#555;
+    border-radius:10px;
+    font-family:Tahoma,Geneva,Arial,sans-serif;font-size:20px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 36px;
+    padding-bottom: 10px;
+    margin-top:10px;
+    margin-bottom:10px;
+    border:1px solid #d4d4d4;
+}
+
+.alert-box span {
+    font-weight:bold;
+    text-transform:uppercase;
+}
+
+.error {
+    background:#ffecec url('images/error.png') no-repeat 10px 50%;
+}
+.success {
+    background:#e9ffd9 url('images/success.png') no-repeat 10px 50%;
+}
+.warning {
+    background:#fff8c4 url('images/warning.png') no-repeat 10px 50%;
+}
+.notice {
+    background:#e3f7fc url('images/notice.png') no-repeat 10px 50%;
+}
+
