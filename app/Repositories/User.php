@@ -215,7 +215,7 @@ class User {
 		$this->mailer->send('emails.contact', $input, function($message)
 		{
 			$message
-				->to(env('MAIL_FROM'), env('MAIL_NAME'))
+				->to(env('MAIL_TO_EMAIL'), env('MAIL_TO_NAME'))
 				->subject('Alguém te enviou uma mensagem pelo site!');
 		});
 	}
