@@ -9,7 +9,7 @@
 			<a href="#me" class="icon fa-home active"><span>Principal</span></a>
 			<a href="#work" class="icon fa-folder"><span>Trabalho</span></a>
 			<a href="#contact" class="icon fa-envelope"><span>Contato</span></a>
-			<a href="{{ env('FACEBOO_PAGE') }}" target="_blank" class="icon fa-facebook"><span>Facebook</span></a>
+			<a href="{{ env('FACEBOOK_PAGE') }}" target="_blank" class="icon fa-facebook"><span>Facebook</span></a>
 		</nav>
 
 		<!-- Main -->
@@ -18,8 +18,8 @@
 			<!-- Me -->
 			<article id="me" class="panel">
 				<header>
-					<h1>Marcos Salvador</h1>
-					<p>Mestre de Obras</p>
+					<h1>MS Reformas</h1>
+					<p>Marcos Salvador - Mestre de Obras</p>
 				</header>
 
 				<a href="#work" class="jumplink pic">
