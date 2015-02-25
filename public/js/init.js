@@ -37,9 +37,9 @@
 			reset: 'full',
 			pollOnce: true,
 			breakpoints: {
-				'global':	{ range: '*', href: 'css/style.css' },
-				'desktop':	{ range: '737-', href: 'css/style-desktop.css', containers: 1200, grid: { gutters: 25 }, viewport: { width: 1080, scalable: false } },
-				'mobile':	{ range: '-736', href: 'css/style-mobile.css', containers: '100%!', grid: { collapse: true, gutters: 15 }, viewport: { scalable: false } }
+				'global':	{ range: '*', href: '/css/style.css' },
+				'desktop':	{ range: '737-', href: '/css/style-desktop.css', containers: 1200, grid: { gutters: 25 }, viewport: { width: 1080, scalable: false } },
+				'mobile':	{ range: '-736', href: '/css/style-mobile.css', containers: '100%!', grid: { collapse: true, gutters: 15 }, viewport: { scalable: false } }
 			}
 		});
 
