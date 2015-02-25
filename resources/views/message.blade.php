@@ -14,7 +14,7 @@
             <!-- Me -->
             <article id="me" class="panel">
                 <header>
-                    <h1>{!! wordwrap($message, 40, "<br><br>") !!}</h1>
+                    <h1>{!! wordwrap($message, 50, "<br><br>") !!}</h1>
                 </header>
             </article>
         </div>
