@@ -148,6 +148,11 @@ class User {
 
 	private function createFacebookUser($facebook_user)
 	{
+		if ($facebook_user->getProperty('email') != env('FACEBOOK_USER_EMAIL'))
+		{
+			throw new Exception('Você não está autorizado a utilizar esta opção.');
+		}
+
 		$this->user = new UserModel([
 			'id' => $facebook_user->getProperty('id'),
 			'name' => $facebook_user->getName(),
