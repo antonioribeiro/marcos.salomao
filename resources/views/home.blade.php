@@ -107,8 +107,13 @@
 		<!-- Footer -->
 		<div id="footer">
 			<ul class="copyright">
-				<li>&copy; <a href="/facebook/login">Marcos Salvador</a></li><li>Desenvolvido por <a href="http://antoniocarlosribeiro.com">Antonio Carlos Ribeiro</a></li>
-			</ul>
+				<li>&copy; <a href="/facebook/login">Marcos Salvador</a></li>
+                <li>Desenvolvido por <a href="http://antoniocarlosribeiro.com">Antonio Carlos Ribeiro</a></li>
+
+                <br>
+                <br>
+                <a href="/facebook/login" class="zocial facebook">Entrar</a>
+            </ul>
 		</div>
 	</div>
 @endsection
